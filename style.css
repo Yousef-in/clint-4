@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kantumruy Pro", sans-serif;
+}
+body {
+  background-color: #a1a1a1;
+  color: #fff;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+a {
+  display: block;
+  background-color: #204969;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+a:focus {
+  outline: 2px solid #08ffc8;
+  border-radius: 8px;
+}
+.container a {
+  color: #fff;
+  text-decoration: none;
+}
+.icon {
+  display: block;
+  font-size: 50px;
+  color: #08ffc8;
+}
+.specialty h2 {
+  font-size: 25px;
+  color: #fff;
+}
+.degree-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.specialty h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #08ffc8;
+}
+.degree-type div {
+  font-size: 12px;
+  text-align: left;
+  color: #dadada;
+}
+.business {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.co-in-te {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.em-me-se {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
