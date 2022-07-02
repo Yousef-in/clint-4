@@ -12,7 +12,9 @@ body {
   display: grid;
   padding: 10px;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap:0 15px;
+  max-width: 1440px;
+  margin: auto;
 }
 a {
   display: block;
@@ -41,22 +43,59 @@ a{
   overflow: hidden;
   transition: .3s;
 }
-a::after{
+.specialty >div{
+  z-index: 100;
+}
+.specialty >div::after{
   content: "";
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 0%;
-  height: 4px;
-  background-color: #08ffc8;
-  transition: .3s;
-}
-.specialty:hover::after{
   width: 100%;
+  height: 100%;
+  background-color: #85858500;
+  transition: .3s;
+  z-index: -1;
+}
+.specialty{
+  background-position: center;
+  background-size: cover;
+  margin-top: 15px;
 }
 .specialty:hover {
-  transform: translateY(-4px);
+  transform: scale(.98);
+}
+.specialty:hover >div::after{
+  background-color: #858585a6;
+}
+.accounting{
+  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_accounting.jpg?itok=17HHKCUj);
+}
+.business{
+  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_business-admin.jpg?itok=jY9a31FN);
+}
+.co-in-te{
+  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_computer-information-tech.jpg?itok=1SNi0zwB);
+}
+.cr-ju{
+  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_criminal-justice.jpg?itok=bTFGFdKv);
+}
+.ea-ch-ed{
+  background-image:url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_early-childhood-education.jpg?itok=qWF2OKo3) ;
+}
+.em-me-se{
+  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/EMS-HERO_0.JPG?itok=Vs5y94My);
+}
+.en-sy-te{
+  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/est_hero.jpg?itok=sItqhMHQ);
+}
+.he-te{
+  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_healthcaretech.png?itok=-dljZ2kX);
+  background-size: 136%;
+}
+.he-in-ma{
+  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/HIM-Hero.jpg?itok=-afyT06V);
 }
 .specialty h2 {
   font-size: 25px;
@@ -77,7 +116,9 @@ a::after{
 .degree-type div {
   font-size: 12px;
   text-align: left;
-  color: #dadada;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 .degree-type div span{
   color: #08ffc8;
