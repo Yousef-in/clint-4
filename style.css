@@ -8,7 +8,124 @@ body {
   background-color: #a1a1a1;
   color: #fff;
 }
-.container {
+:root{
+  --main-color: #08ffc8 ;
+}
+/* start navbar */
+nav{
+  background-color: #204969;
+  color: #fff;
+}
+nav .container {
+  padding: 15px 10px;
+  max-width: 1440px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo{
+  width: 15%;
+}
+nav .logo img{
+  width: 100%;
+}
+nav .link{
+  width: 80%;
+}
+nav .link ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+nav ul a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 6px;
+  padding-bottom: 5px;
+  position: relative;
+  border: none;
+  outline: none;
+  font-weight: 500;
+}
+nav ul a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  height: 2px;
+  width: 0%;
+  transition: .3s;
+}
+nav ul a:hover::after{
+  width: 100%;
+}
+nav .fa.fa-bars{
+  display: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: solid #ccc 1px;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+}
+nav .fa-times{
+  display: none;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: red;
+  cursor: pointer;
+}
+@media screen and (max-width:1100px){
+  nav .fa.fa-bars, nav .fa-times{
+    display: block;
+  }
+  nav ul a::after{
+    display: none;
+  }
+  nav .logo{
+    width: 170px;
+  }
+  nav .menue{
+    padding: 20px 20px 40px;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    background-color: #fff;
+    height: fit-content;
+    width:300px ;
+    z-index: 1000;
+    transition: .5s;
+  }
+  nav .menue ul{
+    display: grid;
+    grid-template-columns:1fr ;
+    justify-content: start;
+  }
+  nav .menue ul li{
+    width: 100%;
+    padding: 10px 0;
+    border-bottom:solid #ccc 1px ;
+  }
+  nav .menue ul li a{
+    color: black;
+    font-size: 18px;
+    margin: 0;
+    width: 100%;
+    display: block;
+    transition: .3s;
+  }
+  nav .menue ul li a:hover{
+    margin-left: 7px;
+  }
+}
+/* end navbar */
+/* start main */
+main .container {
   display: grid;
   padding: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -16,29 +133,29 @@ body {
   max-width: 1440px;
   margin: auto;
 }
-a {
+main a {
   display: block;
   background-color: #204969;
   padding: 15px;
   text-align: center;
   border-radius: 8px;
 }
-a:focus {
-  outline: 2px solid #08ffc8;
+main a:focus {
+  outline: 2px solid var(--main-color);
   border-radius: 8px;
 }
-.container a {
+main .container a {
   display: grid;
   align-items:flex-end;
   color: #fff;
   text-decoration: none;
 }
-.icon {
+main .icon {
   display: block;
   font-size: 50px;
-  color: #08ffc8;
+  color: var(--main-color);
 }
-a{
+main a{
   position: relative;
   overflow: hidden;
   transition: .3s;
@@ -71,32 +188,32 @@ a{
   background-color: #858585a6;
 }
 .accounting{
-  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_accounting.jpg?itok=17HHKCUj);
+  background-image: url(Accounting.jpg);
 }
 .business{
-  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_business-admin.jpg?itok=jY9a31FN);
+  background-image: url(Business.jpg);
 }
 .co-in-te{
-  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_computer-information-tech.jpg?itok=1SNi0zwB);
+  background-image: url(Computer-Information-Technology.jpg);
 }
 .cr-ju{
-  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_criminal-justice.jpg?itok=bTFGFdKv);
+  background-image: url(Criminal-Justice.jpg);
 }
 .ea-ch-ed{
-  background-image:url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_early-childhood-education.jpg?itok=qWF2OKo3) ;
+  background-image:url(Early-Childhood-Education.jpg) ;
 }
 .em-me-se{
-  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/EMS-HERO_0.JPG?itok=Vs5y94My);
+  background-image: url(Emergency-Medical-Services.jpg);
 }
 .en-sy-te{
-  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/est_hero.jpg?itok=sItqhMHQ);
+  background-image: url(Engineering-Systems-Technology.jpg);
 }
 .he-te{
-  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/hero_healthcaretech.png?itok=-dljZ2kX);
+  background-image: url(Healthcare-Technician.jpg);
   background-size: 136%;
 }
 .he-in-ma{
-  background-image: url(https://www.dscc.edu/sites/default/files/styles/544x300/public/HIM-Hero.jpg?itok=-afyT06V);
+  background-image: url(Health-Information-Management.jpg);
 }
 .specialty h2 {
   font-size: 25px;
@@ -111,7 +228,7 @@ a{
   margin-top: 15px;
   margin-bottom: 5px;
   text-align: left;
-  color: #08ffc8;
+  color: var(--main-color);
   font-weight: 500;
 }
 .degree-type div {
@@ -122,7 +239,7 @@ a{
   margin-bottom: 5px;
 }
 .degree-type div span{
-  color: #08ffc8;
+  color: var(--main-color);
   margin-right: 3px;
 }
 .business {
@@ -138,7 +255,7 @@ a{
   grid-column-end: 4;
 }
 @media screen and (max-width: 1180px){
-  .container{
+  main .container{
     grid-template-columns:repeat(2,1fr);
   }
   .business {
@@ -173,7 +290,7 @@ a{
   }
 }
 @media screen and (max-width: 480px){
-  .container{
+  main .container{
     grid-template-columns:1fr;
   }
   .business {
@@ -189,3 +306,4 @@ a{
     grid-column-end: auto;
   }
 }
+/* end main */
